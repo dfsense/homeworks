@@ -15,7 +15,7 @@
 
 $var1 = 9;
 $var2 = 8;
-$operator = '^';
+$operator = '+';
 
 switch ($operator){
     case '+':
