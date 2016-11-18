@@ -53,3 +53,20 @@
 //      <td style='background-color:blue'>22283</td>
 //  </tr>
 // </table>
+
+$rows = 20;
+$cols = 50;
+$colors = array('red','yellow','blue','gray','maroon','brown','green');
+
+$html = '<html><head></head><body><table><tbody>';
+
+for($i = 0; $i < $rows; $i++){
+    $html .= '<tr>';
+    for($j = 0; $j < $cols; $j++){
+        $html .= '<td style="background-color:' . $colors[rand(0, 6)] . '">' . rand(1, 10000) . '</td>';
+    }
+    $html .= '</tr>';
+}
+
+$html .= '</tbody></table></body></html>';
+echo $html;
