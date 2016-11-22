@@ -12,19 +12,27 @@
 for ($i = 0; $i < 10; $i++){
     $arr[$i] = rand(1, 100);
 }
+
+echo '<pre>';
+print_r($arr);
+echo '</pre>';
 $minNum = $arr[0];
 $maxNum = $arr[0];
-//echo $minNum . '<br>';
-//echo $maxNum . '<br>';
 for ($i = 1; $i < 10; $i++){
     if ($arr[$i] < $minNum){
         $minNum = $arr[$i];
+        $minIndex = $i;
         continue;
     }
     if ($arr[$i] > $maxNum){
         $maxNum = $arr[$i];
+        $maxIndex = $i;
     }
 }
+
+$arr[$minIndex] = $maxNum;
+$arr[$maxIndex] = $minNum;
+
 echo '<pre>';
 print_r($arr);
 echo '</pre></br>';
