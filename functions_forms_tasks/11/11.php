@@ -15,27 +15,9 @@
 // Строка, возвращенная функцией :
 //      'А Васька слушает да ест. А воз и ныне там. А вы друзья как ни садитесь,
 //      все в музыканты не годитесь. А король-то — голый. А ларчик просто открывался. А там хоть трава не расти.';
+require_once ("functions.php");
 
 $str = 'а васька слушает да ест. а воз и ныне там. а вы друзья как ни садитесь,
       все в музыканты не годитесь. а король-то — голый. а ларчик просто открывался.а там хоть трава не расти.';
-
-
-$arr = explode('.', $str);
-
-foreach ($arr as $key => $value){
-    $strTemp = ltrim($value);
-
-//    unset($strTemp);
-    $strTemp[0] = mb_convert_case(substr($strTemp[0], MB_CASE_TITLE, "UTF-8"));
-    echo $strTemp;
-//    $value = $strTemp . substr($value, ind-1);
-//    echo $value . '</br>';
-
-
-//    $arr[$key] =
-//        echo ucfirst($value);
-}
-
-echo '<pre>';
-print_r($arr);
-echo '</pre>';
+echo $str.'<br>';
+echo upFirstChar($str);
