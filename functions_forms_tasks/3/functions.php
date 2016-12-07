@@ -1,7 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kovalev
- * Date: 06.12.16
- * Time: 4:20
- */
+
+function removeFileResult(){
+    if(file_exists("lorem_u.txt")){
+        unlink("lorem_u.txt");
+    }
+}

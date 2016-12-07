@@ -11,7 +11,7 @@
 </head>
 <body>
     <p>Форма для удаления всех слов, длина которых превыщает N символов</p>
-    <form action="3.php" method="post">
+    <form action="3.php" method="POST">
         <input type="text" name="numChar">
         <input type="submit" value="Удалить">
         <input type="hidden" name="delete" value="true">
@@ -20,14 +20,8 @@
 </html>
 
 <?php
-if (isset($_POST['delete']) == 'true'){
-    $file = file("lorem.txt", FILE_IGNORE_NEW_LINES);
-    foreach ($file as $value) {
-        $arrFile = mb_split("", $file);
-    }
-//    mb_split("", $file);
-    echo 'yahoo';
-}
+
+require_once ("functions.php");
 
 
 
