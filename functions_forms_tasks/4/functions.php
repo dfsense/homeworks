@@ -1,7 +1,7 @@
 <?php
 
 function listFiles($dir){
-    if ($dir[strlen($dir)-1] !== '/');{
+    if ($dir[strlen($dir)-1] !== '/'){
         $dir .= '/';
     }
     $files = scandir($dir);
